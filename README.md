@@ -3,6 +3,8 @@
 Aplicación de chat con inteligencia artificial desarrollada con **React**, **Node.js** y **OpenRouter**,que permite mantener múltiples conversaciones y recibir respuestas en tiempo real mediante streaming.
 
 ---
+🌐 Live Demo: https://openrouter-chat-ai-1.onrender.com/
+⚠️ Nota: Si la aplicación tarda unos segundos en cargar la primera vez, es normal. El servidor está alojado en el plan gratuito de Render y puede tardar unos momentos en activarse después de estar inactivo.
 
 # 🚀 Características
 
