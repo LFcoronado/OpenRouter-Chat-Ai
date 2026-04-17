@@ -1,0 +1,240 @@
+body{
+  margin:0;
+  background:#0f0f0f;
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto;
+  color:white;
+}
+
+/* layout principal */
+
+.layout{
+  display:flex;
+  height:100vh;
+  width:100%;
+}
+
+/* sidebar */
+
+.sidebar{
+  width:260px;
+  background:#020617;
+  border-right:1px solid #1e293b;
+  padding:15px;
+  display:flex;
+  flex-direction:column;
+}
+
+.new-chat{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1px solid #334155;
+  background:#0f172a;
+  color:white;
+  cursor:pointer;
+  margin-bottom:15px;
+  transition:background 0.3s ease;
+}
+
+.new-chat:hover{
+  background:#1e293b;
+}
+
+.chat-item{
+  padding:10px;
+  border-radius:8px;
+  font-size:14px;
+  cursor:pointer;
+  color:#cbd5f5;
+  transition:0.2s;
+}
+
+.chat-item:hover{
+  background:#0f172a;
+}
+
+.chat-item.active{
+  background:#1e293b;
+}
+
+/* area principal */
+
+.main{
+  flex:1;
+  display:flex;
+  flex-direction:column;
+  height:100vh;
+  justify-content:flex-start;
+}
+
+/* contenedor de chat */
+
+.chatContainer{
+  flex:1;
+  overflow-y:auto;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+
+  width:100%;
+  max-width:900px;
+  margin:auto;
+
+  padding:40px 20px 120px 20px;
+}
+
+/* mensajes */
+
+.message{
+  max-width:60%;
+  padding:14px 18px;
+  border-radius:18px;
+  line-height:1.5;
+  font-size:15px;
+}
+
+.message.user{
+  align-self:flex-end;
+  background:#2a2a2a;
+
+  margin-right:80px;   
+}
+
+.message.assistant{
+  align-self:flex-start;
+  background:#1a1a1a;
+
+  margin-left:40px;
+}
+
+/* barra de escribir */
+
+.inputContainer{
+  position:fixed;
+  bottom:25px;
+  left:260px;
+  right:0;
+
+  display:flex;
+  justify-content:center;
+  pointer-events:none;
+}
+
+/* caja del input */
+
+.inputWrapper{
+  display:flex;
+  align-items:center;
+
+  width:100%;
+  max-width:700px;
+
+  background:#18181b;
+  border-radius:40px;
+  border:1px solid #27272a;
+
+  padding:8px;
+
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+
+  pointer-events:auto;
+}
+
+/* efecto focus */
+
+.inputWrapper:focus-within{
+  border-color:#2563eb;
+  box-shadow:0 0 0 2px rgba(37,99,235,.25);
+}
+
+/* input */
+
+.inputWrapper input{
+  flex:1;
+  padding:14px 18px;
+  border:none;
+  background:transparent;
+  color:white;
+  outline:none;
+  font-size:15px;
+}
+
+/* placeholder */
+
+.inputWrapper input::placeholder{
+  color:#71717a;
+}
+
+/* botón enviar */
+
+.inputWrapper button{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  border:none;
+
+  background:#2563eb;
+  color:white;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  cursor:pointer;
+
+  transition:all .25s ease;
+}
+
+.inputWrapper button:hover{
+  background:#1d4ed8;
+  transform:scale(1.08);
+}
+
+/* icono enviar */
+
+.inputWrapper button::before{
+  content:"➤";
+  font-size:16px;
+}
+
+/* animación mensajes */
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+    transform:translateY(5px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* typing */
+
+.typing{
+  display:flex;
+  gap:6px;
+}
+
+.typing span{
+  width:6px;
+  height:6px;
+  background:#777;
+  border-radius:50%;
+  animation:blink 1.4s infinite;
+}
+
+.typing span:nth-child(2){
+  animation-delay:0.2s;
+}
+
+.typing span:nth-child(3){
+  animation-delay:0.4s;
+}
+
+@keyframes blink{
+  0%{opacity:.2}
+  20%{opacity:1}
+  100%{opacity:.2}
+}
