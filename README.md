@@ -52,7 +52,7 @@ AI-CHAT-APP
 ## 1️⃣ Clonar el repositorio
 
 ```bash
-git clone https://github.com/tuusuario/ai-chat-app.git
+git clone "https://github.com/LFcoronado/OpenRouter-Chat-Ai.git"
 ```
 
 ---
@@ -127,6 +127,7 @@ La aplicación incluye:
 * 🖼 Soporte para imágenes
 * 📱 Diseño responsive para móviles
 * 🌙 Modo oscuro / claro
+*    Sea responsive en movil
 
 ---
 
